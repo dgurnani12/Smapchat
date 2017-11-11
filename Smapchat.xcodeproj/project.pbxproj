@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		285E5B84897D08698599392C /* Pods_Smapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D224795E6790F33D9DB8FE /* Pods_Smapchat.framework */; };
 		8C38EF901FB79B6100DDD909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38EF8F1FB79B6100DDD909 /* AppDelegate.swift */; };
 		8C38EF921FB79B6100DDD909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38EF911FB79B6100DDD909 /* ViewController.swift */; };
 		8C38EF951FB79B6100DDD909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C38EF931FB79B6100DDD909 /* Main.storyboard */; };
@@ -14,6 +15,11 @@
 		8C38EF9A1FB79B6100DDD909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C38EF981FB79B6100DDD909 /* LaunchScreen.storyboard */; };
 		8C38EFA51FB79B6100DDD909 /* SmapchatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38EFA41FB79B6100DDD909 /* SmapchatTests.swift */; };
 		8C38EFB01FB79B6100DDD909 /* SmapchatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38EFAF1FB79B6100DDD909 /* SmapchatUITests.swift */; };
+		8C38EFBE1FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */; };
+		8C38EFBF1FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */; };
+		8C38EFC01FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */; };
+		A2020AE552D82AC6F3F7683D /* Pods_SmapchatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381FA63BEF8B87971D6676E2 /* Pods_SmapchatTests.framework */; };
+		CEEEB5A3411CAB98C401DF13 /* Pods_SmapchatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD7EAE65BDE0C1A6FA6C77B /* Pods_SmapchatUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1418BF343F22E3392D760073 /* Pods-SmapchatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmapchatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmapchatTests/Pods-SmapchatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		15C9AF794DCA8D68A4988735 /* Pods-Smapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smapchat/Pods-Smapchat.release.xcconfig"; sourceTree = "<group>"; };
+		381FA63BEF8B87971D6676E2 /* Pods_SmapchatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmapchatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72DAF40D34C678E132DEC071 /* Pods-SmapchatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmapchatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmapchatUITests/Pods-SmapchatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C38EF8C1FB79B6100DDD909 /* Smapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C38EF8F1FB79B6100DDD909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C38EF911FB79B6100DDD909 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,12 @@
 		8C38EFAB1FB79B6100DDD909 /* SmapchatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmapchatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C38EFAF1FB79B6100DDD909 /* SmapchatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmapchatUITests.swift; sourceTree = "<group>"; };
 		8C38EFB11FB79B6100DDD909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CD7EAE65BDE0C1A6FA6C77B /* Pods_SmapchatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmapchatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2465A33586BFC34AD0BD62 /* Pods-SmapchatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmapchatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmapchatUITests/Pods-SmapchatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E3D224795E6790F33D9DB8FE /* Pods_Smapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8D46B512C96328F899FE992 /* Pods-Smapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smapchat/Pods-Smapchat.debug.xcconfig"; sourceTree = "<group>"; };
+		F91B84587F6C4E9E83B40FD5 /* Pods-SmapchatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmapchatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmapchatTests/Pods-SmapchatTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285E5B84897D08698599392C /* Pods_Smapchat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2020AE552D82AC6F3F7683D /* Pods_SmapchatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEEB5A3411CAB98C401DF13 /* Pods_SmapchatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0B9382B587AF273A3251CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3D224795E6790F33D9DB8FE /* Pods_Smapchat.framework */,
+				381FA63BEF8B87971D6676E2 /* Pods_SmapchatTests.framework */,
+				8CD7EAE65BDE0C1A6FA6C77B /* Pods_SmapchatUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35A0CAE7B57F640A531FA36A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8D46B512C96328F899FE992 /* Pods-Smapchat.debug.xcconfig */,
+				15C9AF794DCA8D68A4988735 /* Pods-Smapchat.release.xcconfig */,
+				1418BF343F22E3392D760073 /* Pods-SmapchatTests.debug.xcconfig */,
+				F91B84587F6C4E9E83B40FD5 /* Pods-SmapchatTests.release.xcconfig */,
+				72DAF40D34C678E132DEC071 /* Pods-SmapchatUITests.debug.xcconfig */,
+				BC2465A33586BFC34AD0BD62 /* Pods-SmapchatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8C38EF831FB79B6100DDD909 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +123,8 @@
 				8C38EFA31FB79B6100DDD909 /* SmapchatTests */,
 				8C38EFAE1FB79B6100DDD909 /* SmapchatUITests */,
 				8C38EF8D1FB79B6100DDD909 /* Products */,
+				35A0CAE7B57F640A531FA36A /* Pods */,
+				1F0B9382B587AF273A3251CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +147,7 @@
 				8C38EF961FB79B6100DDD909 /* Assets.xcassets */,
 				8C38EF981FB79B6100DDD909 /* LaunchScreen.storyboard */,
 				8C38EF9B1FB79B6100DDD909 /* Info.plist */,
+				8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */,
 			);
 			path = Smapchat;
 			sourceTree = "<group>";
@@ -132,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C38EFB41FB79B6100DDD909 /* Build configuration list for PBXNativeTarget "Smapchat" */;
 			buildPhases = (
+				AE8648518D79C69684CC55FF /* [CP] Check Pods Manifest.lock */,
 				8C38EF881FB79B6100DDD909 /* Sources */,
 				8C38EF891FB79B6100DDD909 /* Frameworks */,
 				8C38EF8A1FB79B6100DDD909 /* Resources */,
+				7E3BB4A9F22D19334ED72F43 /* [CP] Embed Pods Frameworks */,
+				D8557BE5D92BDEEFB992CB69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C38EFB71FB79B6100DDD909 /* Build configuration list for PBXNativeTarget "SmapchatTests" */;
 			buildPhases = (
+				D4AB5081FBC275A5B1A8765F /* [CP] Check Pods Manifest.lock */,
 				8C38EF9C1FB79B6100DDD909 /* Sources */,
 				8C38EF9D1FB79B6100DDD909 /* Frameworks */,
 				8C38EF9E1FB79B6100DDD909 /* Resources */,
+				58E24F079D7BBC31B887CB00 /* [CP] Embed Pods Frameworks */,
+				0B4917D98D5B5E57BA8BABED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C38EFBA1FB79B6100DDD909 /* Build configuration list for PBXNativeTarget "SmapchatUITests" */;
 			buildPhases = (
+				F2CFB4EE4CD8A8AFBB4B92AD /* [CP] Check Pods Manifest.lock */,
 				8C38EFA71FB79B6100DDD909 /* Sources */,
 				8C38EFA81FB79B6100DDD909 /* Frameworks */,
 				8C38EFA91FB79B6100DDD909 /* Resources */,
+				C172AB34D19779B8F54472BD /* [CP] Embed Pods Frameworks */,
+				C6A99DDCA91A81ABABC2553C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C38EF9A1FB79B6100DDD909 /* LaunchScreen.storyboard in Resources */,
+				8C38EFBE1FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */,
 				8C38EF971FB79B6100DDD909 /* Assets.xcassets in Resources */,
 				8C38EF951FB79B6100DDD909 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C38EFBF1FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +305,149 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C38EFC01FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B4917D98D5B5E57BA8BABED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmapchatTests/Pods-SmapchatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58E24F079D7BBC31B887CB00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmapchatTests/Pods-SmapchatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E3BB4A9F22D19334ED72F43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smapchat/Pods-Smapchat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE8648518D79C69684CC55FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C172AB34D19779B8F54472BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmapchatUITests/Pods-SmapchatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6A99DDCA91A81ABABC2553C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmapchatUITests/Pods-SmapchatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4AB5081FBC275A5B1A8765F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8557BE5D92BDEEFB992CB69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smapchat/Pods-Smapchat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2CFB4EE4CD8A8AFBB4B92AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C38EF881FB79B6100DDD909 /* Sources */ = {
@@ -424,6 +619,7 @@
 		};
 		8C38EFB51FB79B6100DDD909 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8D46B512C96328F899FE992 /* Pods-Smapchat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +634,7 @@
 		};
 		8C38EFB61FB79B6100DDD909 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15C9AF794DCA8D68A4988735 /* Pods-Smapchat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +649,7 @@
 		};
 		8C38EFB81FB79B6100DDD909 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1418BF343F22E3392D760073 /* Pods-SmapchatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +666,7 @@
 		};
 		8C38EFB91FB79B6100DDD909 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91B84587F6C4E9E83B40FD5 /* Pods-SmapchatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +683,7 @@
 		};
 		8C38EFBB1FB79B6100DDD909 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72DAF40D34C678E132DEC071 /* Pods-SmapchatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +699,7 @@
 		};
 		8C38EFBC1FB79B6100DDD909 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2465A33586BFC34AD0BD62 /* Pods-SmapchatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
