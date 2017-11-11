@@ -1,0 +1,6 @@
+framework module Pods_SmapchatUITests {
+  umbrella header "Pods-SmapchatUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
