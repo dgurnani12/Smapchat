@@ -22,7 +22,7 @@ class SnapsViewControllerTableViewController: UITableViewController {
     }
 
     @IBAction func Logout(_ sender: Any) {
-        Auth.signOut(Auth)
+        try! Auth.auth().signOut();
         dismiss(animated:true, completion: nil)
         print("Logout Success")
     }
