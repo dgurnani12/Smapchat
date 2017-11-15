@@ -29,6 +29,7 @@
                                 <rect key="frame" x="16" y="247" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OR8-h4-qUs">
@@ -70,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
-        <!--Snaps View Controller Table View Controller-->
+        <!--Recieved Snaps-->
         <scene sceneID="jej-sV-fA0">
             <objects>
-                <tableViewController id="UQf-5D-01n" customClass="SnapsViewControllerTableViewController" customModule="Smapchat" sceneMemberID="viewController">
+                <tableViewController id="UQf-5D-01n" customClass="SnapsViewController" customModule="Smapchat" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="snapTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XMF-xn-yzc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,10 +94,15 @@
                             <outlet property="delegate" destination="UQf-5D-01n" id="bbG-0J-bUY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="q9d-qK-MSj">
+                    <navigationItem key="navigationItem" title="Recieved Snaps" id="q9d-qK-MSj">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="Idj-gJ-7am" userLabel="Logout">
                             <connections>
                                 <action selector="Logout:" destination="UQf-5D-01n" id="fUY-7p-bg5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0eA-qR-33D">
+                            <connections>
+                                <segue destination="GtA-vp-Uej" kind="show" id="gf3-la-oYI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -104,6 +110,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XD-qQ-Aah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1450" y="32"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MHd-1W-WRb">
+            <objects>
+                <viewController id="GtA-vp-Uej" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SXx-45-IRm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIB-Uk-yBG">
+                                <rect key="frame" x="0.0" y="603" width="200" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="QPi-EU-a3R"/>
+                                </constraints>
+                                <state key="normal" title="Existing Picture">
+                                    <color key="titleColor" red="0.30548861620000001" green="0.62772077319999997" blue="0.99324268100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-gq-DEI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                                <color key="backgroundColor" red="0.73475955309999996" green="0.714507008" blue="0.72416158419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qe3-ep-ZOw">
+                                <rect key="frame" x="0.0" y="318" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPn-eF-T0p" userLabel="Send to ...">
+                                <rect key="frame" x="301" y="64" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send to ... "/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StV-3G-5d9">
+                                <rect key="frame" x="208" y="603" width="167" height="64"/>
+                                <state key="normal" title="Use Camera">
+                                    <color key="titleColor" red="0.30548861620000001" green="0.62772077319999997" blue="0.99324268100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="0nT-kM-zyP"/>
+                            <constraint firstItem="PSO-gq-DEI" firstAttribute="centerX" secondItem="SXx-45-IRm" secondAttribute="centerX" id="KHD-YG-Rkt"/>
+                            <constraint firstItem="StV-3G-5d9" firstAttribute="top" secondItem="PSO-gq-DEI" secondAttribute="bottom" id="OjT-T7-NPl"/>
+                            <constraint firstItem="NJ3-R3-UZi" firstAttribute="trailing" secondItem="Qe3-ep-ZOw" secondAttribute="trailing" id="ScD-RJ-JlS"/>
+                            <constraint firstItem="PSO-gq-DEI" firstAttribute="top" secondItem="NJ3-R3-UZi" secondAttribute="top" id="T7c-UG-AKu"/>
+                            <constraint firstItem="PSO-gq-DEI" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="UDh-su-QcK"/>
+                            <constraint firstItem="StV-3G-5d9" firstAttribute="trailing" secondItem="NJ3-R3-UZi" secondAttribute="trailing" id="WnJ-uz-Pde"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="Wqu-Ne-XfG"/>
+                            <constraint firstItem="PSO-gq-DEI" firstAttribute="trailing" secondItem="NJ3-R3-UZi" secondAttribute="trailing" id="Y2T-oh-7g0"/>
+                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="top" secondItem="PSO-gq-DEI" secondAttribute="bottom" id="eFs-vU-Jn4"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="centerX" secondItem="SXx-45-IRm" secondAttribute="centerX" id="hXx-ux-LVA"/>
+                            <constraint firstItem="StV-3G-5d9" firstAttribute="bottom" secondItem="NJ3-R3-UZi" secondAttribute="bottom" id="n6S-OX-xyW"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="centerY" secondItem="SXx-45-IRm" secondAttribute="centerY" id="sOK-RH-VmT"/>
+                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="bottom" secondItem="NJ3-R3-UZi" secondAttribute="bottom" id="ydq-Xf-m1f"/>
+                            <constraint firstItem="PSO-gq-DEI" firstAttribute="centerY" secondItem="SXx-45-IRm" secondAttribute="centerY" id="z9R-IY-nLL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NJ3-R3-UZi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sfs-9q-yye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="30.134932533733135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rcv-Js-gMF">

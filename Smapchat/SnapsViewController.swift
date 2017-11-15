@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class SnapsViewControllerTableViewController: UITableViewController {
+class SnapsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
