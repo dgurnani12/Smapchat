@@ -22,4 +22,4 @@ Just trying it out:
 
 Debug, add features, and submit a PR:
 
-3) Reconfigure the Firebase endpoint in the so that it uses your own Firebase backend instance (as I cannot guarranty my endpoint will still be accessible). Refer to the [firebase docs](https://firebase.google.com/) for this step if needed.
+3) Reconfigure the Firebase endpoint so that it uses your own Firebase backend instance (as I cannot guarranty my endpoint will still be accessible). Refer to the [firebase docs](https://firebase.google.com/) for this step if needed.
