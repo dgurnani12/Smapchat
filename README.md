@@ -1,5 +1,5 @@
 # Smapchat -- Snapchat clone for IOS 11
-I made this clone to familarize myself with Xcode9 and IOS 11. The backend I used 
+I made this clone to familarize myself with Xcode9 and IOS 11. I used Firebase for the backend and the standard Xcode9 for the front end.  
 
 ## How to use this app:
 1) Login/signup to begin.
@@ -22,4 +22,4 @@ Just trying it out:
 
 Debug, add features, and submit a PR:
 
-3) Configure the Firebase settings in AppDelagates so that it uses your own Firebase backend instance. 
+3) Reconfigure the Firebase endpoint in the so that it uses your own Firebase backend instance (as I cannot guarranty my endpoint will still be accessible). Refer to the [firebase docs](https://firebase.google.com/) for this step if needed.
