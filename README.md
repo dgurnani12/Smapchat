@@ -16,8 +16,10 @@ These are temporary ... I'm still working on this app :)
 
 ## Installation:
 Just trying it out:
+
 1) Clone this repo and open with Xcode9.
 2) Build and run on the simulator.
 
 Debug, add features, and submit a PR:
+
 3) Configure the Firebase settings in AppDelagates so that it uses your own Firebase backend instance. 
