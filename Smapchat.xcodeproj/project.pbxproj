@@ -18,6 +18,8 @@
 		8C38EFBE1FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */; };
 		8C38EFBF1FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */; };
 		8C38EFC01FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */; };
+		8C471D221FBE6F0900AD2B6E /* smapchat_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C471D211FBE6F0800AD2B6E /* smapchat_logo.png */; };
+		8C471D241FBE7A5000AD2B6E /* SelectPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C471D231FBE7A5000AD2B6E /* SelectPictureViewController.swift */; };
 		8C502D2F1FB804160090521E /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C502D2E1FB804160090521E /* SnapsViewController.swift */; };
 		A2020AE552D82AC6F3F7683D /* Pods_SmapchatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381FA63BEF8B87971D6676E2 /* Pods_SmapchatTests.framework */; };
 		CEEEB5A3411CAB98C401DF13 /* Pods_SmapchatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD7EAE65BDE0C1A6FA6C77B /* Pods_SmapchatUITests.framework */; };
@@ -59,6 +61,8 @@
 		8C38EFAF1FB79B6100DDD909 /* SmapchatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmapchatUITests.swift; sourceTree = "<group>"; };
 		8C38EFB11FB79B6100DDD909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C38EFBD1FB79E2B00DDD909 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8C471D211FBE6F0800AD2B6E /* smapchat_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smapchat_logo.png; sourceTree = "<group>"; };
+		8C471D231FBE7A5000AD2B6E /* SelectPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPictureViewController.swift; sourceTree = "<group>"; };
 		8C502D2E1FB804160090521E /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		8CD7EAE65BDE0C1A6FA6C77B /* Pods_SmapchatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmapchatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2465A33586BFC34AD0BD62 /* Pods-SmapchatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmapchatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmapchatUITests/Pods-SmapchatUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,10 +147,12 @@
 		8C38EF8E1FB79B6100DDD909 /* Smapchat */ = {
 			isa = PBXGroup;
 			children = (
+				8C471D211FBE6F0800AD2B6E /* smapchat_logo.png */,
 				8C38EF8F1FB79B6100DDD909 /* AppDelegate.swift */,
 				8C38EF911FB79B6100DDD909 /* LoginViewController.swift */,
 				8C502D2E1FB804160090521E /* SnapsViewController.swift */,
 				8C38EF931FB79B6100DDD909 /* Main.storyboard */,
+				8C471D231FBE7A5000AD2B6E /* SelectPictureViewController.swift */,
 				8C38EF961FB79B6100DDD909 /* Assets.xcassets */,
 				8C38EF981FB79B6100DDD909 /* LaunchScreen.storyboard */,
 				8C38EF9B1FB79B6100DDD909 /* Info.plist */,
@@ -289,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C471D221FBE6F0900AD2B6E /* smapchat_logo.png in Resources */,
 				8C38EF9A1FB79B6100DDD909 /* LaunchScreen.storyboard in Resources */,
 				8C38EFBE1FB79E2B00DDD909 /* GoogleService-Info.plist in Resources */,
 				8C38EF971FB79B6100DDD909 /* Assets.xcassets in Resources */,
@@ -458,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C38EF921FB79B6100DDD909 /* LoginViewController.swift in Sources */,
+				8C471D241FBE7A5000AD2B6E /* SelectPictureViewController.swift in Sources */,
 				8C502D2F1FB804160090521E /* SnapsViewController.swift in Sources */,
 				8C38EF901FB79B6100DDD909 /* AppDelegate.swift in Sources */,
 			);
