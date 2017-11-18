@@ -9,7 +9,7 @@
 import UIKit
 
 class SelectPictureViewController: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +23,15 @@ class SelectPictureViewController: UIViewController {
     }
     
     @IBAction func ExistingPicture(_ sender: Any) {
-    
     }
     
-    
-    @IBAction func UseCamera(_ sender: Any) {
-    
+    @IBAction func TakePicture(_ sender: Any) {
     }
     
     @IBAction func SendTo(_ sender: Any) {
-        
+    }
+    
+    @IBAction func MessageText(_ sender: Any) {
     }
     
     /*

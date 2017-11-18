@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -140,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="1450" y="32"/>
         </scene>
-        <!--View Controller-->
+        <!--Snap Config-->
         <scene sceneID="MHd-1W-WRb">
             <objects>
                 <viewController id="GtA-vp-Uej" sceneMemberID="viewController">
@@ -148,74 +149,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIB-Uk-yBG">
-                                <rect key="frame" x="0.0" y="603" width="187.5" height="64"/>
-                                <state key="normal" title="Existing Picture">
-                                    <color key="titleColor" red="0.30548861620000001" green="0.62772077319999997" blue="0.99324268100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="ExistingPicture:" destination="Kxw-8Q-esU" eventType="touchUpInside" id="G5Q-hl-ZPI"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-gq-DEI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PSO-gq-DEI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="573"/>
                                 <color key="backgroundColor" red="0.73475955309999996" green="0.714507008" blue="0.72416158419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.20000000000000001" y="0.20000000000000001" width="1" height="1"/>
                             </imageView>
                             <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qe3-ep-ZOw">
-                                <rect key="frame" x="0.0" y="318" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="MessageText:" destination="Kxw-8Q-esU" eventType="editingDidEnd" id="EAW-Jo-agX"/>
+                                    <action selector="messageTextField:" destination="Kxw-8Q-esU" eventType="editingDidEnd" id="orj-7w-ftJ"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPn-eF-T0p" userLabel="Send to ...">
-                                <rect key="frame" x="301" y="64" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send to ... "/>
-                                <connections>
-                                    <action selector="SendTo:" destination="Kxw-8Q-esU" eventType="touchUpInside" id="iU9-LS-8ci"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StV-3G-5d9">
-                                <rect key="frame" x="187.5" y="603" width="187.5" height="64"/>
-                                <state key="normal" title="Use Camera">
-                                    <color key="titleColor" red="0.30548861620000001" green="0.62772077319999997" blue="0.99324268100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="UseCamera:" destination="Kxw-8Q-esU" eventType="touchUpInside" id="EWM-eS-hPx"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="0nT-kM-zyP"/>
-                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="3xT-ZW-wWA"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="leading" secondItem="QIB-Uk-yBG" secondAttribute="trailing" id="9Qh-yj-ez6"/>
-                            <constraint firstItem="PSO-gq-DEI" firstAttribute="centerX" secondItem="SXx-45-IRm" secondAttribute="centerX" id="KHD-YG-Rkt"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="leading" secondItem="QIB-Uk-yBG" secondAttribute="trailing" id="LAW-VO-DIk"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="top" secondItem="PSO-gq-DEI" secondAttribute="bottom" id="OjT-T7-NPl"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="width" secondItem="QIB-Uk-yBG" secondAttribute="width" id="RIl-21-if9"/>
-                            <constraint firstItem="NJ3-R3-UZi" firstAttribute="trailing" secondItem="Qe3-ep-ZOw" secondAttribute="trailing" id="ScD-RJ-JlS"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="trailing" secondItem="NJ3-R3-UZi" secondAttribute="trailing" id="T0T-8q-FUb"/>
-                            <constraint firstItem="PSO-gq-DEI" firstAttribute="top" secondItem="NJ3-R3-UZi" secondAttribute="top" id="T7c-UG-AKu"/>
-                            <constraint firstItem="PSO-gq-DEI" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="UDh-su-QcK"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="trailing" secondItem="NJ3-R3-UZi" secondAttribute="trailing" id="WnJ-uz-Pde"/>
-                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="Wqu-Ne-XfG"/>
-                            <constraint firstItem="PSO-gq-DEI" firstAttribute="trailing" secondItem="NJ3-R3-UZi" secondAttribute="trailing" id="Y2T-oh-7g0"/>
-                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="top" secondItem="PSO-gq-DEI" secondAttribute="bottom" id="eFs-vU-Jn4"/>
-                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="centerX" secondItem="SXx-45-IRm" secondAttribute="centerX" id="hXx-ux-LVA"/>
-                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="bottom" secondItem="NJ3-R3-UZi" secondAttribute="bottom" id="jut-SG-aBQ"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="top" secondItem="PSO-gq-DEI" secondAttribute="bottom" id="mUT-we-3eo"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="bottom" secondItem="NJ3-R3-UZi" secondAttribute="bottom" id="n6S-OX-xyW"/>
-                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="top" secondItem="PSO-gq-DEI" secondAttribute="bottom" id="on1-i5-K2I"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="leading" secondItem="QIB-Uk-yBG" secondAttribute="trailing" id="pdZ-vB-UBM"/>
-                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="centerY" secondItem="SXx-45-IRm" secondAttribute="centerY" id="sOK-RH-VmT"/>
-                            <constraint firstItem="QIB-Uk-yBG" firstAttribute="bottom" secondItem="NJ3-R3-UZi" secondAttribute="bottom" id="ydq-Xf-m1f"/>
-                            <constraint firstItem="StV-3G-5d9" firstAttribute="bottom" secondItem="QIB-Uk-yBG" secondAttribute="bottom" id="ywB-60-hEE"/>
-                            <constraint firstItem="PSO-gq-DEI" firstAttribute="centerY" secondItem="SXx-45-IRm" secondAttribute="centerY" id="z9R-IY-nLL"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="trailing" secondItem="NJ3-R3-UZi" secondAttribute="trailing" id="9no-O5-4Rw"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="BEx-Zz-QcO"/>
+                            <constraint firstItem="PSO-gq-DEI" firstAttribute="trailing" secondItem="NJ3-R3-UZi" secondAttribute="trailing" id="OkH-gv-nL2"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="bottom" secondItem="NJ3-R3-UZi" secondAttribute="bottom" id="OsW-n8-6eZ"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="centerX" secondItem="SXx-45-IRm" secondAttribute="centerX" id="SsS-RG-Bs5"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="top" secondItem="PSO-gq-DEI" secondAttribute="bottom" id="UC4-di-SkG"/>
+                            <constraint firstItem="Qe3-ep-ZOw" firstAttribute="top" secondItem="PSO-gq-DEI" secondAttribute="bottom" id="XCz-bf-SEG"/>
+                            <constraint firstItem="PSO-gq-DEI" firstAttribute="leading" secondItem="NJ3-R3-UZi" secondAttribute="leading" id="hlU-dr-XjF"/>
+                            <constraint firstItem="PSO-gq-DEI" firstAttribute="top" secondItem="NJ3-R3-UZi" secondAttribute="top" id="qIF-eV-G29"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NJ3-R3-UZi"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Snap Config" id="gT7-9q-cdI">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="X1j-x4-vVt">
+                                <connections>
+                                    <action selector="SendTo:" destination="Kxw-8Q-esU" id="J7c-qz-2a5"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="Xpy-d9-VwD">
+                                <connections>
+                                    <action selector="TakePicture:" destination="Kxw-8Q-esU" id="tMC-Wb-cpv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="Yse-0G-s98">
+                                <connections>
+                                    <action selector="ExistingPicture:" destination="Kxw-8Q-esU" id="uNR-tu-rzo"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfs-9q-yye" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Kxw-8Q-esU" userLabel="Exit" sceneMemberID="exit"/>
