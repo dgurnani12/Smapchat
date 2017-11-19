@@ -8,13 +8,19 @@
 
 import UIKit
 
-class SelectPictureViewController: UIViewController {
+class SelectPictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var message: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    
+    var imagePicker : UIImagePickerController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        imagePicker = UIImagePickerController()
+        imagePicker?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,17 +29,36 @@ class SelectPictureViewController: UIViewController {
     }
     
     @IBAction func ExistingPicture(_ sender: Any) {
+        print("Existing Pictures was tapped")
+        if imagePicker != nil {
+            imagePicker!.sourceType = .photoLibrary
+            present(imagePicker!, animated: true, completion: nil )
+        }
     }
     
     @IBAction func TakePicture(_ sender: Any) {
+        print("Camera was tapped")
+        if imagePicker != nil {
+            imagePicker!.sourceType = .camera
+            present(imagePicker!, animated: true, completion: nil )
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = image
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func SendTo(_ sender: Any) {
+        print("Send was tapped")
     }
-    
-    @IBAction func MessageText(_ sender: Any) {
-    }
-    
+   
     /*
     // MARK: - Navigation
 

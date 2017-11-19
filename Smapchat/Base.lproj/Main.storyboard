@@ -144,7 +144,7 @@
         <!--Snap Config-->
         <scene sceneID="MHd-1W-WRb">
             <objects>
-                <viewController id="GtA-vp-Uej" sceneMemberID="viewController">
+                <viewController id="GtA-vp-Uej" customClass="SelectPictureViewController" customModule="Smapchat" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SXx-45-IRm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,21 +183,25 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="play" id="X1j-x4-vVt">
                                 <connections>
-                                    <action selector="SendTo:" destination="Kxw-8Q-esU" id="J7c-qz-2a5"/>
+                                    <action selector="SendTo:" destination="GtA-vp-Uej" id="MDL-E8-9bx"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="camera" id="Xpy-d9-VwD">
                                 <connections>
-                                    <action selector="TakePicture:" destination="Kxw-8Q-esU" id="tMC-Wb-cpv"/>
+                                    <action selector="TakePicture:" destination="GtA-vp-Uej" id="31M-I5-Ccx"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="organize" id="Yse-0G-s98">
                                 <connections>
-                                    <action selector="ExistingPicture:" destination="Kxw-8Q-esU" id="uNR-tu-rzo"/>
+                                    <action selector="ExistingPicture:" destination="GtA-vp-Uej" id="026-a2-2cl"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="PSO-gq-DEI" id="iJ3-sk-tV3"/>
+                        <outlet property="message" destination="Qe3-ep-ZOw" id="E5Y-rP-Fda"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sfs-9q-yye" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Kxw-8Q-esU" userLabel="Exit" sceneMemberID="exit"/>
