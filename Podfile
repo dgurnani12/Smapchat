@@ -10,6 +10,7 @@ target 'Smapchat' do
   # Pods for Smapchat
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 
   target 'SmapchatTests' do
     inherit! :search_paths
