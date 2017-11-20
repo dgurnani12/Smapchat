@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class SelectPictureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -14,6 +15,7 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var imageView: UIImageView!
     
     var imagePicker : UIImagePickerController?
+    var imageAddedToView = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +53,56 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
+            imageAddedToView = true
         }
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func SendTo(_ sender: Any) {
-        print("Send was tapped")
+        print("SendTo was tapped")
+        
+        if imageAddedToView {
+            // upload the image
+            let imagesFolder = Storage.storage().reference().child("snaps")
+            
+            if let image = imageView.image {
+                let imageData = UIImageJPEGRepresentation(image,0.1)
+                
+                imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData!, metadata: nil, completion: {(metadata, error) in
+                    if let error = error {
+                        self.PresentAlert(alert: error.localizedDescription)
+                    } else {
+                        // Segue to the next view controller
+                        if let dlURL = metadata?.downloadURL()?.absoluteString {
+                            self.performSegue(withIdentifier: "SendToSegue", sender: dlURL)
+                        }
+                    }
+                })
+            }
+        } else {
+            // Image wasn't properly congifured
+            PresentAlert(alert:"An Image is required in order to send a snap")
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dlURL = sender as? String {
+            if let controller = segue.destination as? RecipientTableViewController {
+                controller.downloadURL = dlURL
+            }
+        }
+    }
+    
+    func PresentAlert(alert:String) {
+        let alertController = UIAlertController(title: "Error", message: alert, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default) {(action) in
+            alertController.dismiss(animated:true, completion: nil)
+        }
+        
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
    
     /*
