@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class RecipientTableViewController: UITableViewController {
 
-    var downloadURL = ""
+    // Sent from the prepare segue function
+    var downloadURI = ""
+    var message = ""
+    
+    // List of Users that you can send the snap to
+    var users : [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +27,25 @@ class RecipientTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        print(self.downloadURL)
+        
+        print("DownloadURL: \(self.downloadURI)")
+        print("Message: \(self.message)")
+        
+        // configures users list
+        Database.database().reference().child("users").observe(.childAdded)
+            { (snapshot) in
+                let user = User()
+            
+                if let userDic = snapshot.value as? NSDictionary {
+                    if let email = userDic["email"] as? String {
+                        user.email = email
+                        user.uid = snapshot.key
+                        
+                        self.users.append(user)
+                        self.tableView.reloadData()
+                    }
+                }
+            }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,25 +55,40 @@ class RecipientTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    /*override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
-    }
+    }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return users.count
     }
 
-    /*
+    // Set the cells text
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = UITableViewCell()
+        let user = users[indexPath.row]
+        
+        cell.textLabel?.text = user.email
+        //self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        
         return cell
     }
-    */
+    
+    // When a cell is tapped, put the snap into the target users 'snaps' in the db
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let target = users[indexPath.row]
+        
+        if let fromEmail = Auth.auth().currentUser?.email {
+            let snap = ["from":fromEmail, "description":self.message, "imageURI": downloadURI]
+            Database.database().reference().child("users").child(target.uid).child("snaps").setValue(snap)
+            
+            // return to 'recieved snaps' view
+            navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -95,4 +135,10 @@ class RecipientTableViewController: UITableViewController {
     }
     */
 
+}
+
+
+class User {
+        var email = ""
+        var uid = ""
 }

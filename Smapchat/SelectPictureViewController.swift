@@ -62,34 +62,43 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
         print("SendTo was tapped")
         
         if imageAddedToView {
-            // upload the image
+            // upload the image case
             let imagesFolder = Storage.storage().reference().child("snaps")
             
             if let image = imageView.image {
                 let imageData = UIImageJPEGRepresentation(image,0.1)
                 
+                // Upload the image with an unique ID
                 imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData!, metadata: nil, completion: {(metadata, error) in
-                    if let error = error {
-                        self.PresentAlert(alert: error.localizedDescription)
-                    } else {
-                        // Segue to the next view controller
-                        if let dlURL = metadata?.downloadURL()?.absoluteString {
-                            self.performSegue(withIdentifier: "SendToSegue", sender: dlURL)
+                        if let error = error {
+                            self.PresentAlert(alert: error.localizedDescription)
+                        } else {
+                            // Segue to the next view controller
+                            if let dlURI = metadata?.downloadURL()?.absoluteString {
+                                self.performSegue(withIdentifier: "SendToSegue", sender: dlURI)
+                            }
                         }
-                    }
                 })
             }
         } else {
-            // Image wasn't properly congifured
+            // Image wasn't properly congifured case
             PresentAlert(alert:"An Image is required in order to send a snap")
         }
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dlURL = sender as? String {
+        if let dlURI = sender as? String {
             if let controller = segue.destination as? RecipientTableViewController {
-                controller.downloadURL = dlURL
+                
+                controller.downloadURI = dlURI
+                
+                if let message = self.message.text {
+                    controller.message = message
+                } else {
+                    controller.message = ""
+                }
+                
             }
         }
     }
