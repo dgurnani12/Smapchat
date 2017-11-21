@@ -32,7 +32,7 @@ class RecipientTableViewController: UITableViewController {
         print("Message: \(self.message)")
         
         // configures users list
-        Database.database().reference().child("users").observe(.childAdded)
+        Database.database().reference().child("users").observe(.childAdded, with:
             { (snapshot) in
                 let user = User()
             
@@ -45,7 +45,7 @@ class RecipientTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     }
                 }
-            }
+            })
     }
 
     override func didReceiveMemoryWarning() {

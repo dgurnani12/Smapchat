@@ -8,9 +8,12 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class SnapsViewController: UITableViewController {
 
+    var snaps : [DataSnapshot] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +22,15 @@ class SnapsViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        // Load snaps for ME
+        if let me = Auth.auth().currentUser?.uid {
+            Database.database().reference().child("users").child(me).child("snaps").observe(.childAdded, with: {(snapshot) in
+                    self.snaps.append(snapshot)
+                    self.tableView.reloadData()
+                })
+            
+        }
     }
 
     @IBAction func Logout(_ sender: Any) {
@@ -35,25 +47,33 @@ class SnapsViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    /*override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
-    }
+    }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.snaps.count
     }
 
-    /*
+    // Set the cells text
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = UITableViewCell()
+        
+        let snap = snaps[indexPath.row]
+        
+        if let snapDic = snap.value as? NSDictionary {
+            if let sender = snapDic["from"] as? String {
+                cell.textLabel?.text = sender
+            } else {
+                cell.textLabel?.text = "Could not configure this"
+            }
+        }
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
