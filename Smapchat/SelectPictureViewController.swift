@@ -16,6 +16,7 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
     
     var imagePicker : UIImagePickerController?
     var imageAddedToView = false
+    var generatedImageId = "\(NSUUID().uuidString).jpg"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +70,7 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
                 let imageData = UIImageJPEGRepresentation(image,0.1)
                 
                 // Upload the image with an unique ID
-                imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData!, metadata: nil, completion: {(metadata, error) in
+                imagesFolder.child(self.generatedImageId).putData(imageData!, metadata: nil, completion: {(metadata, error) in
                         if let error = error {
                             self.PresentAlert(alert: error.localizedDescription)
                         } else {
@@ -98,6 +99,8 @@ class SelectPictureViewController: UIViewController, UIImagePickerControllerDele
                 } else {
                     controller.message = ""
                 }
+                
+                controller.imageFileName = self.generatedImageId
                 
             }
         }

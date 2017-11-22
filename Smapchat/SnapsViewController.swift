@@ -23,14 +23,35 @@ class SnapsViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        // Load snaps for ME
+        
         if let me = Auth.auth().currentUser?.uid {
+            
+            // Load snaps for ME
             Database.database().reference().child("users").child(me).child("snaps").observe(.childAdded, with: {(snapshot) in
                     self.snaps.append(snapshot)
                     self.tableView.reloadData()
                 })
             
+            // Delete snaps for ME
+            Database.database().reference().child("users").child(me).child("snaps").observe(.childRemoved, with: {(snapshot) in
+                
+                var loopCounter = 0
+                for element in self.snaps {
+                    if(snapshot.key == element.key) {
+                        // remove case
+                        self.snaps.remove(at: loopCounter)
+                    }
+                    loopCounter += 1
+                }
+
+                self.tableView.reloadData()
+                
+            })
+            
         }
+        
+        
+        
     }
 
     @IBAction func Logout(_ sender: Any) {
@@ -54,24 +75,55 @@ class SnapsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.snaps.count
+        
+        if self.snaps.count == 0 {
+            // Case in which we shall put a placeholder cell with a message
+            return 1
+        } else {
+            return self.snaps.count
+        }
+        
+        
     }
 
     // Set the cells text
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        let snap = snaps[indexPath.row]
+        if snaps.count == 0 {
+            // Case in which we shall put a placeholder cell with a message
+            cell.textLabel?.text = "No snaps yet 😢 ..."
+        } else {
+            let snap = snaps[indexPath.row]
         
-        if let snapDic = snap.value as? NSDictionary {
-            if let sender = snapDic["from"] as? String {
-                cell.textLabel?.text = sender
-            } else {
-                cell.textLabel?.text = "Could not configure this"
+            if let snapDic = snap.value as? NSDictionary {
+                if let sender = snapDic["from"] as? String {
+                    cell.textLabel?.text = sender
+                } else {
+                    cell.textLabel?.text = "Could not configure this"
+                }
             }
+        
         }
         
         return cell
+    }
+    
+    // segue to the detailed snap view
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let snap = snaps[indexPath.row]
+        performSegue(withIdentifier: "ViewSnapDetailSegue", sender: snap)
+    }
+    
+    // pass the snap to the detailed view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewSnapDetailSegue" {
+            if let controller = segue.destination as? DetailedSnapViewController {
+                if let snap = sender as? DataSnapshot {
+                    controller.snap = snap
+                }
+            }
+        }
     }
     
 

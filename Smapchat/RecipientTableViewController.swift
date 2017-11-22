@@ -15,6 +15,7 @@ class RecipientTableViewController: UITableViewController {
     // Sent from the prepare segue function
     var downloadURI = ""
     var message = ""
+    var imageFileName = ""
     
     // List of Users that you can send the snap to
     var users : [User] = []
@@ -81,8 +82,8 @@ class RecipientTableViewController: UITableViewController {
         let target = users[indexPath.row]
         
         if let fromEmail = Auth.auth().currentUser?.email {
-            let snap = ["from":fromEmail, "description":self.message, "imageURI": downloadURI]
-            Database.database().reference().child("users").child(target.uid).child("snaps").setValue(snap)
+            let snap = ["from":fromEmail, "description":self.message, "imageURI": self.downloadURI, "imageFileName": self.imageFileName]
+            Database.database().reference().child("users").child(target.uid).child("snaps").childByAutoId().setValue(snap)
             
             // return to 'recieved snaps' view
             navigationController?.popToRootViewController(animated: true)

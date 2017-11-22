@@ -12,6 +12,7 @@ target 'Smapchat' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
+  pod 'SDWebImage', '~> 4.0'
 
   target 'SmapchatTests' do
     inherit! :search_paths
