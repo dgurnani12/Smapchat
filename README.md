@@ -9,9 +9,9 @@ I made this clone to familarize myself with Xcode9 and IOS 11. I used Firebase f
 ## Screenshots:
 These are temporary ... I'm still working on this app :)
 <p align="center">
-  <img src="https://github.com/dgurnani12/Smapchat/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202017-11-18%20at%2000.39.49.png" width="216" height="384"/>
-  <img src="https://github.com/dgurnani12/Smapchat/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202017-11-18%20at%2000.40.06.png" width="216" height="384"/>
-  <img src="https://github.com/dgurnani12/Smapchat/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202017-11-19%20at%2016.13.07.png" width="216" height="384"/>
+  <img src="https://github.com/dgurnani12/Smapchat/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202017-11-21%20at%2022.21.42.png" width="216" height="384"/>
+  <img src="https://github.com/dgurnani12/Smapchat/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202017-11-21%20at%2022.21.47.png" width="216" height="384"/>
+  <img src="https://github.com/dgurnani12/Smapchat/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202017-11-21%20at%2022.22.52.png" width="216" height="384"/>
 </p>
 
 ## Installation:
