@@ -30,7 +30,15 @@ class DetailedSnapViewController: UIViewController {
                     if let imageName = snapDic["imageFileName"] as? String {
                         
                         self.LabelView.text = message
-                        self.ImageView.sd_setImage(with: URL(string: imageURI))
+                        
+                        let block: SDExternalCompletionBlock! = {(image, error, cacheType, imageURL) -> Void in
+                            self.LabelView.text = message
+                        }
+                        
+                        self.ImageView.sd_setImage(with: URL(string: imageURI), completed: block)
+                        
+                        //self.ImageView.sd_setImage(with: URL(string: imageURI))
+                        //self.LabelView.text = message
                         self.targetImageName = imageName
                     
                     }
