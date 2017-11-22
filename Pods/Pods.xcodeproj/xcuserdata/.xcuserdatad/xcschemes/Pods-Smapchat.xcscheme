@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7B9B87046204CB82561662ED68CAE715'
+               BlueprintIdentifier = '189E8A5E4B30CAE75EF444B1BF1A7AD3'
                BlueprintName = 'Pods-Smapchat'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-Smapchat.framework'>
