@@ -7,7 +7,6 @@ I made this clone to familarize myself with Xcode9 and IOS 11. I used Firebase f
 3) The user can send a snap by tapping the '+' icon (top right nav item),  
 
 ## Screenshots:
-These are temporary ... I'm still working on this app :)
 <p align="center">
   <img src="https://github.com/dgurnani12/Smapchat/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202017-11-21%20at%2023.47.09.png" width="216" height="384"/>
   <img src="https://github.com/dgurnani12/Smapchat/blob/master/Screenshots/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202017-11-21%20at%2023.47.03.png" width="216" height="384"/>
